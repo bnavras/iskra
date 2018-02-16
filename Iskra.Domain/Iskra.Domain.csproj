@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2AE7510-7598-4EC7-AD44-2E02A966C837}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Iskra.Domain</RootNamespace>
+    <AssemblyName>Iskra.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=3.2.6.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.6\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.4.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Business transactions\OneTimeVisitAdder.cs" />
+    <Compile Include="Domain\Entities\Client.cs" />
+    <Compile Include="Domain\Entities\ClientType.cs" />
+    <Compile Include="Domain\Entities\Discount.cs" />
+    <Compile Include="Domain\Entities\Duty.cs" />
+    <Compile Include="Domain\Entities\Equipment.cs" />
+    <Compile Include="Domain\Entities\OneTimeVisit.cs" />
+    <Compile Include="Domain\Entities\Ticket.cs" />
+    <Compile Include="Domain\Entities\TicketType.cs" />
+    <Compile Include="Domain\Entities\Trainer.cs" />
+    <Compile Include="Domain\Entities\TrainingType.cs" />
+    <Compile Include="Domain\Entities\TransactionType.cs" />
+    <Compile Include="Domain\Entities\User.cs" />
+    <Compile Include="Domain\Entities\UserType.cs" />
+    <Compile Include="Domain\Entities\Visit.cs" />
+    <Compile Include="Domain\Entities\VisitWithTicket.cs" />
+    <Compile Include="Domain\Entities\CashOperation.cs" />
+    <Compile Include="Domain\Entities\CommonVisit.cs" />
+    <Compile Include="Domain\Business transactions\VisitWithTicketAdder.cs" />
+    <Compile Include="Domain\Mappings\ClientMap.cs" />
+    <Compile Include="Domain\Mappings\ClientTypeMap.cs" />
+    <Compile Include="Domain\Mappings\DiscountMap.cs" />
+    <Compile Include="Domain\Mappings\DutyMap.cs" />
+    <Compile Include="Domain\Repositories\CommonVisitRepository.cs" />
+    <Compile Include="Domain\Repositories\DutyRepository.cs" />
+    <Compile Include="Domain\Mappings\EquipmentMap.cs" />
+    <Compile Include="Domain\Mappings\OneTimeVisitMap.cs" />
+    <Compile Include="Domain\Mappings\TicketMap.cs" />
+    <Compile Include="Domain\Mappings\TicketTypeMap.cs" />
+    <Compile Include="Domain\Mappings\TrainerMap.cs" />
+    <Compile Include="Domain\Mappings\TrainingTypeMap.cs" />
+    <Compile Include="Domain\Mappings\TransactionTypeMap.cs" />
+    <Compile Include="Domain\Mappings\UserMap.cs" />
+    <Compile Include="Domain\Mappings\UserTypeMap.cs" />
+    <Compile Include="Domain\Mappings\VisitWithTicketMap.cs" />
+    <Compile Include="Domain\Mappings\СashOperationMap.cs" />
+    <Compile Include="Domain\Mappings\СommonVisitMap.cs" />
+    <Compile Include="Domain\Repositories\ClientRepository.cs" />
+    <Compile Include="Domain\Repositories\ClientTypeRepository.cs" />
+    <Compile Include="Domain\Repositories\DiscountRepository.cs" />
+    <Compile Include="Domain\Repositories\EquipmentRepository.cs" />
+    <Compile Include="Domain\Repositories\TicketRepository.cs" />
+    <Compile Include="Domain\Repositories\TicketTypeRepository.cs" />
+    <Compile Include="Domain\Repositories\TrainerRepository.cs" />
+    <Compile Include="Domain\Repositories\TrainingTypeRepository.cs" />
+    <Compile Include="Domain\Repositories\UserRepository.cs" />
+    <Compile Include="Domain\Repositories\OneTimeVisitRepository.cs" />
+    <Compile Include="Domain\Repositories\UserTypeRepository.cs" />
+    <Compile Include="Domain\Repositories\VariableRepository.cs" />
+    <Compile Include="Domain\Repositories\VisitWithTicketRepository.cs" />
+    <Compile Include="Infrastructure\Authorization.cs" />
+    <Compile Include="Infrastructure\FluentNHibernateHelper.cs" />
+    <Compile Include="Infrastructure\Entity.cs" />
+    <Compile Include="Infrastructure\interfaces\IAuthorization.cs" />
+    <Compile Include="Infrastructure\interfaces\IPasswordEncryption.cs" />
+    <Compile Include="Infrastructure\interfaces\IRepository.cs" />
+    <Compile Include="Infrastructure\interfaces\IUnitOfWork.cs" />
+    <Compile Include="Domain\Repositories\BaseRepository.cs" />
+    <Compile Include="Infrastructure\MD5PasswordEncryptor.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Infrastructure\ValueType.cs" />
+    <Compile Include="Domain\Entities\Variable.cs" />
+    <Compile Include="Domain\Mappings\VariableMap.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

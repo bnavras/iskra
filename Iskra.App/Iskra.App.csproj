@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B97C5994-7C3B-47C3-BDF6-751EBC94B07A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Iskra.App</RootNamespace>
+    <AssemblyName>Iskra.App</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.4.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AddVenderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\AddVenderForm.Designer.cs">
+      <DependentUpon>AddVenderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\BarForm.Designer.cs">
+      <DependentUpon>BarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalog\AddCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalog\AddCategoryForm.Designer.cs">
+      <DependentUpon>AddCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalog\AddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalog\AddProductForm.Designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalog\CatalogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalog\CatalogForm.Designer.cs">
+      <DependentUpon>CatalogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\Client\EditClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\Client\EditClientForm.Designer.cs">
+      <DependentUpon>EditClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\Ticket\AddProgramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\Ticket\AddProgramForm.Designer.cs">
+      <DependentUpon>AddProgramForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\User\EditPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\User\EditPasswordForm.Designer.cs">
+      <DependentUpon>EditPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start windows\RemindersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start windows\RemindersForm.Designer.cs">
+      <DependentUpon>RemindersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\Directions training\DirectionsTrainingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\Directions training\DirectionsTrainingForm.Designer.cs">
+      <DependentUpon>DirectionsTrainingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\Discont\DiscontForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\Discont\DiscontForm.Designer.cs">
+      <DependentUpon>DiscontForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\Ticket\AddNewTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\Ticket\AddNewTicket.Designer.cs">
+      <DependentUpon>AddNewTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\Ticket\EditTicketsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\Ticket\EditTicketsForm.Designer.cs">
+      <DependentUpon>EditTicketsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\Ticket\TicketsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\Ticket\TicketsForm.Designer.cs">
+      <DependentUpon>TicketsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\Client\AddClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\Client\AddClientForm.Designer.cs">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\Client\EditTicketTemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\Client\EditTicketTemplateForm.Designer.cs">
+      <DependentUpon>EditTicketTemplateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\Client\ClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\Client\ClientsForm.Designer.cs">
+      <DependentUpon>ClientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\Trainer\AddNewTrainerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\Trainer\AddNewTrainerForm.Designer.cs">
+      <DependentUpon>AddNewTrainerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\Trainer\EditTrainerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\Trainer\EditTrainerForm.Designer.cs">
+      <DependentUpon>EditTrainerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\Trainer\TrainersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\Trainer\TrainersForm.Designer.cs">
+      <DependentUpon>TrainersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\User\AddNewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\User\AddNewUserForm.Designer.cs">
+      <DependentUpon>AddNewUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\User\EditUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\User\EditUserForm.Designer.cs">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\Button list\User\UsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\Button list\User\UsersForm.Designer.cs">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main window\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main window\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportsForm.Designer.cs">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SellTicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\SellTicketForm.Designer.cs">
+      <DependentUpon>SellTicketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start windows\SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start windows\SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visits\AddClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visits\AddClassForm.Designer.cs">
+      <DependentUpon>AddClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visits\AddVisitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visits\AddVisitForm.Designer.cs">
+      <DependentUpon>AddVisitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Common\AddVenderForm.resx">
+      <DependentUpon>AddVenderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\BarForm.resx">
+      <DependentUpon>BarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalog\AddCategoryForm.resx">
+      <DependentUpon>AddCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalog\AddProductForm.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalog\CatalogForm.resx">
+      <DependentUpon>CatalogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\Client\EditClientForm.resx">
+      <DependentUpon>EditClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\Ticket\AddNewTicket.resx">
+      <DependentUpon>AddNewTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\Ticket\AddProgramForm.resx">
+      <DependentUpon>AddProgramForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\User\EditPasswordForm.resx">
+      <DependentUpon>EditPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start windows\RemindersForm.resx">
+      <DependentUpon>RemindersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\Directions training\DirectionsTrainingForm.resx">
+      <DependentUpon>DirectionsTrainingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\Discont\DiscontForm.resx">
+      <DependentUpon>DiscontForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\Ticket\EditTicketsForm.resx">
+      <DependentUpon>EditTicketsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\Ticket\TicketsForm.resx">
+      <DependentUpon>TicketsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\Client\AddClientForm.resx">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\Client\EditTicketTemplateForm.resx">
+      <DependentUpon>EditTicketTemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\Client\ClientsForm.resx">
+      <DependentUpon>ClientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\Trainer\AddNewTrainerForm.resx">
+      <DependentUpon>AddNewTrainerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\Trainer\EditTrainerForm.resx">
+      <DependentUpon>EditTrainerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\Trainer\TrainersForm.resx">
+      <DependentUpon>TrainersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\User\AddNewUserForm.resx">
+      <DependentUpon>AddNewUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\User\EditUserForm.resx">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\Button list\User\UsersForm.resx">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportsForm.resx">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\SellTicketForm.resx">
+      <DependentUpon>SellTicketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start windows\SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visits\AddClassForm.resx">
+      <DependentUpon>AddClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visits\AddVisitForm.resx">
+      <DependentUpon>AddVisitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hot-coffee-rounded-cup-on-a-plate-from-side-view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group-of-people-in-a-formation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Iskra.Domain\Iskra.Domain.csproj">
+      <Project>{c2ae7510-7598-4ec7-ad44-2e02a966c837}</Project>
+      <Name>Iskra.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
